@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DigitalBoost Marketing</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+}
+
+/* HEADER */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    position:fixed;
+    width:100%;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+header h2{
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+nav a{
+    color:white;
+    margin-left:25px;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00e0ff;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 20px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:20px;
+    animation:fadeDown 1s ease-in-out;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:30px;
+    opacity:0.9;
+}
+
+.hero button{
+    padding:15px 40px;
+    font-size:18px;
+    border:none;
+    border-radius:50px;
+    background:#00e0ff;
+    color:black;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero button:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 20px #00e0ff;
+}
+
+/* SERVICES */
+.services{
+    padding:100px 8%;
+    text-align:center;
+}
+
+.services h2{
+    font-size:40px;
+    margin-bottom:50px;
+}
+
+.service-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.service-box{
+    background:rgba(255,255,255,0.1);
+    padding:30px;
+    width:280px;
+    border-radius:15px;
+    backdrop-filter:blur(10px);
+    transition:0.4s;
+}
+
+.service-box:hover{
+    transform:translateY(-15px);
+    background:#00e0ff;
+    color:black;
+}
+
+.service-box h3{
+    margin-bottom:15px;
+}
+
+/* CONTACT */
+.contact{
+    padding:100px 8%;
+    text-align:center;
+}
+
+.contact h2{
+    margin-bottom:30px;
+    font-size:40px;
+}
+
+form{
+    max-width:500px;
+    margin:auto;
+}
+
+input, textarea{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    border:none;
+    border-radius:8px;
+}
+
+form button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:50px;
+    background:#00e0ff;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+form button:hover{
+    background:white;
+}
+
+/* FOOTER */
+footer{
+    background:black;
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+}
+
+/* ANIMATION */
+@keyframes fadeDown{
+    from{opacity:0; transform:translateY(-50px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .hero h1{
+        font-size:35px;
+    }
+
+    .service-container{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>DigitalBoost</h2>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Grow Your Business Online 🚀</h1>
+    <p>We help brands increase sales using powerful digital marketing strategies.</p>
+    <button onclick="showMessage()">Get Started</button>
+</section>
+
+<section class="services" id="services">
+    <h2>Our Services</h2>
+
+    <div class="service-container">
+
+        <div class="service-box">
+            <h3>📱 Social Media Marketing</h3>
+            <p>Instagram, Facebook & TikTok growth strategies.</p>
+        </div>
+
+        <div class="service-box">
+            <h3>🎯 Google Ads</h3>
+            <p>High converting paid ads that bring customers fast.</p>
+        </div>
+
+        <div class="service-box">
+            <h3>💻 Website Design</h3>
+            <p>Modern responsive business websites that sell.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
+
+    <form onsubmit="sendMessage(event)">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+
+</section>
+
+<footer>
+    <p>© 2026 DigitalBoost Marketing. All Rights Reserved.</p>
+</footer>
+
+<script>
+function showMessage(){
+    alert("Welcome to DigitalBoost Marketing 🚀 Let's grow your business!");
+}
+
+function sendMessage(event){
+    event.preventDefault();
+    alert("Message Sent Successfully! We will contact you soon.");
+}
+</script>
+
+</body>
+</html>
