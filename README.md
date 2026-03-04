@@ -1,7 +1,7 @@
 # 👋 Hi, I'm Ibrahim
 
 ## 🚀 About Me
-Frontend Developer & Digital Marketer based in Lagos, Nigeria.
+Frontend Developer & Digital Marketer based in Adamawa, Nigeria.
 
 ## 💻 Skills
 - HTML
